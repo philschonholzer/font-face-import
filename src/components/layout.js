@@ -7,25 +7,24 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { createGlobalStyle } from "styled-components"
+
+import "../font/font.css"
 
 import Header from "./header"
-import "./layout.css"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family: 'Fira Code';
+  }
+
+`
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <GlobalStyle />
+      <Header siteTitle="Title" />
       <div
         style={{
           margin: `0 auto`,
