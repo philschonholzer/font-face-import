@@ -20,8 +20,8 @@ const IndexPage = () => (
       <Link to="/page-2/">link to page 2</Link>.
     </p>
     <p>
-      If you want to see an example how not to do it, take a look at this{" "}
-      <a href="https://font-face-import.netlify.app">project</a>.
+      If you want to see an example how <b>not</b> to do it, take a look at this{" "}
+      <a href="https://font-face-styled-components.netlify.app">project</a>.
     </p>
     <div css="display: flex; flex-wrap: wrap; margin: 1em -1em">
       <div css="flex: 0 1 300px; margin: 1em">
